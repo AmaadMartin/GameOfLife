@@ -12,15 +12,7 @@ def printGrid(grid):
     cv2.imshow("GameOfLife", frame)
 
 def rules(grid, y, x):
-    cell = grid[y][x]
-    neighbors = 0
-    for dy in range(-1, 2):
-        for dx in range(-1, 2):
-            if (dy != 0 or dx != 0) and 0 <= x + dx and x + dx < width and 0 <= y + dy and y + dy < height:
-                neighbors += grid[y + dy][x + dx]
-    if (cell == 1 and (neighbors == 2 or neighbors == 3)) or (cell == 0 and neighbors == 3):
-        return 1
-    else: return 0          
+    pass      
 
 if __name__ == "__main__":
     width = 40
